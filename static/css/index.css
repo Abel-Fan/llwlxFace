@@ -111,6 +111,35 @@ body,html{
     color:#95D178;
 }
 
+.tishi{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-image:url("../img/bg07.png");
+    background-size:100% 100%;
+}
+.tishi .text1{
+    margin-top:6.5rem;
+    text-align: center;
+    color:#4B4B4A;
+    padding:0.1rem 0;
+}
+.tishi .text2{
+    text-align: center;
+    color:#4B4B4A;
+}
+.tishi .tsbtn{
+    width:3.02rem;
+    height:0.6rem;
+    background:linear-gradient(to right,#E8AB38,#F2CB41);
+    margin:3rem auto 0;
+    border-radius: 0.3rem;
+    text-align: center;
+    line-height: 0.6rem;
+    color:#fff;
+}
 
 
 
