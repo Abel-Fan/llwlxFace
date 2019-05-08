@@ -8,6 +8,7 @@
     <title>注册</title>
     <link rel="stylesheet" href="../static/css/u-reset.min.css">
     <link rel="stylesheet" href="../static/css/zhuce.css">
+    <script src="../static/js/jquery.js"></script>
 </head>
 <body>
     <div class="touxiang">
@@ -23,5 +24,19 @@
         <input type="text" placeholder="请输入您的名字">
     </div>
 
+    <div class="btn">开始识别</div>
+
 </body>
+<script>
+    let input = $("input");
+    let btn = $(".btn");
+    input.on("input",function(){
+        let text = $(this).val()  // 输入框的内容
+        if(text!=""){
+            btn.css("background-color","red")
+        }else{
+            btn.css("background-color","#ccc")
+        }
+    })
+</script>
 </html>

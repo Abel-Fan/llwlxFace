@@ -96,5 +96,14 @@ body,html{
     border:0;
     outline: 0;
 }
-
+.btn{
+    width:3.7rem;
+    height:0.72rem;
+    background-color:#ccc;
+    border-radius: 0.36rem;
+    margin:2.6rem auto 0;
+    text-align: center;
+    line-height:0.72rem;
+    color:#333;
+}
 
