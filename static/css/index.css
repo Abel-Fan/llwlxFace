@@ -41,6 +41,18 @@ body,html{
     text-align:center;
     line-height:0.72rem;
     color:#fff;
+    box-shadow:0 0.1rem 0.1rem 0 rgba(98,163,254,0.5);
+}
+.btn2{
+    width:4.72rem;
+    height:0.72rem;
+    background:linear-gradient(to right,#91CC83,#A1DE51);
+    border-radius: 0.36rem;
+    text-align:center;
+    line-height:0.72rem;
+    color:#fff;
+    box-shadow:0 0.1rem 0.1rem 0 rgba(144,202,130,0.5);
+    margin:0.46rem auto 0;
 }
 
 
