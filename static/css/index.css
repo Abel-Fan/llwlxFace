@@ -9,5 +9,25 @@
 body,html{
     width:100%;
     height:100%;
-    background-color:#EDEDED;
+    background-color: #aacca1;
+    overflow:hidden;
+/*    超出部分隐藏*/
+}
+.jiqiren{
+    display:block;
+    /* 转化为块元素   */
+    width:3.14rem;
+    height:3.14rem;
+    margin:0 auto;
+    /* 外间距   */
+    margin-top:2rem;
+}
+.box{
+    width:100%;
+    text-align:center;
+/*  文本居中  */
+    margin-top:0.6rem;
+    font-size:0.32rem;
+    font-weight:bold;
+    color:#4B4B4A;
 }
