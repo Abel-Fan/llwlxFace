@@ -1,0 +1,13 @@
+*{
+/*通用选择器*/
+    margin:0;
+    padding:0;
+    /* 内间距:   */
+    list-style:none;
+    /* 清除列表样式 */
+}
+body,html{
+    width:100%;
+    height:100%;
+    background-color:#EDEDED;
+}
