@@ -11,14 +11,12 @@ body,html{
 .touxiang{
     width:4.08rem;
     height:4.08rem;
-    background-color:red;
     margin:0.66rem auto 0;
     position:relative;
 }
 .touxiang .touxiangimg{
     width:1.73rem;
     height:1.58rem;
-    background-color:blue;
     position:absolute;
     top:0;
     right:0;
@@ -27,5 +25,43 @@ body,html{
     margin:auto;
     background-image:url("../img/touxiang.gif");
     background-size:1.73rem 1.58rem;
+    z-index:10;
+/*    层级*/
 }
+/*群组选择器*/
+.box1,.box2,.box3{
+    width:2.5rem;
+    height:2.5rem;
+    background-color:green;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    border-radius: 50%;
+    opacity:0.7;
+/*    透明度*/
+}
+.box1{
+    animation: scale 1.5s infinite 0s;
+}
+.box2{
+    animation: scale 1.5s infinite 0.2s;
+}
+.box3{
+    animation: scale 1.5s infinite 0.4s;
+}
+
+@keyframes scale {
+    from{
+        transform:scale(1);
+    }
+    to{
+        transform:scale(2);
+        opacity: 0;
+        background-color:red;
+    }
+}
+
 
