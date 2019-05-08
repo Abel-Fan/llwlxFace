@@ -31,3 +31,23 @@ body,html{
     font-weight:bold;
     color:#4B4B4A;
 }
+
+.btn1{
+    width:4.72rem;
+    height:0.72rem;
+    background:linear-gradient(to right,#60A2FD,#7CC2FD);
+    margin: 4.3rem auto 0;
+    border-radius: 0.36rem;
+    text-align:center;
+    line-height:0.72rem;
+    color:#fff;
+}
+
+
+
+
+
+
+
+
+
