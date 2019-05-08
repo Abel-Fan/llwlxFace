@@ -41,14 +41,26 @@
     let btn2 =  $(".btn2"); //获取btn2
     let zhezhao = $(".zhezhao");
     let rightbtn = $(".rightbtn");
+    let tishi = $(".tishi");
+    let leftbtn = $(".leftbtn");
 
     btn2.click(function(){  //btn2添加点击事件
         //alert(123)          //弹出123
         zhezhao.css("display","block")
-    })
+    });
     rightbtn.click(function(){
         zhezhao.css("display","none")
-    })
+    });
+    leftbtn.click(function(){
+        tishi.css("display",'block')
+
+        let speech = window.speechSynthesis;
+        let speechset = new SpeechSynthesisUtterance();
+        speechset.text = "请将音量调到适中";
+        speech.speak(speechset)
+
+    });
+
 
 
 </script>

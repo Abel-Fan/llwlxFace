@@ -119,6 +119,7 @@ body,html{
     left:0;
     background-image:url("../img/bg07.png");
     background-size:100% 100%;
+    display: none;
 }
 .tishi .text1{
     margin-top:6.5rem;
