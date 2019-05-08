@@ -31,8 +31,15 @@
 </body>
 <script>
     let btn2 =  $(".btn2"); //获取btn2
+    let zhezhao = $(".zhezhao");
+    let rightbtn = $(".rightbtn");
+
     btn2.click(function(){  //btn2添加点击事件
-        alert(123)          //弹出123
+        //alert(123)          //弹出123
+        zhezhao.css("display","block")
+    })
+    rightbtn.click(function(){
+        zhezhao.css("display","none")
     })
 
 
