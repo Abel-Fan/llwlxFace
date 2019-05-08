@@ -30,12 +30,29 @@
 <script>
     let input = $("input");
     let btn = $(".btn");
+    let flag = false;
     input.on("input",function(){
         let text = $(this).val()  // 输入框的内容
         if(text!=""){
-            btn.css("background-color","red")
+            btn.css({
+                "background":"linear-gradient(to right,#60A2FD,#7CC2FD)",
+                "color":"#fff",
+                "box-shadow":"0 0.1rem 0.1rem 0 rgba(98,163,254,0.5)"
+            })
+            flag = true
         }else{
-            btn.css("background-color","#ccc")
+            btn.css({
+                "background":"#ccc",
+                "color":"#333",
+                "box-shadow":"none"
+            })
+            flag = false
+        }
+    })
+
+    btn.click(function(){
+        if(flag){
+            location.href="https://www.baidu.com"
         }
     })
 </script>
