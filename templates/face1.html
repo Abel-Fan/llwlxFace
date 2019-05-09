@@ -57,8 +57,14 @@
     }).then(function(data){
         video[0].srcObject = data;
     });
+    let flag = true;
     video[0].onprogress = function(){
-        cobj.drawImage(video[0],0,0)
+        if(flag){
+            cobj.drawImage(video[0],0,0);
+            let data = canvas[0].toDataURL("image/jpeg",0.7);
+            console.log(data);
+            flag = false;
+        }
     };
 
 
