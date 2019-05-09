@@ -38,13 +38,16 @@
             </div>
         </div>
     </div>
-
+    <canvas width="190" height="250"></canvas>
 </body>
 
 <script>
     let video = $("video");
     let tishi1 = $(".tishi1");
     let tishi2 = $(".tishi2");
+    let canvas = $("canvas");
+
+    cobj = canvas[0].getContext("2d");
 
     navigator.mediaDevices.getUserMedia({
         video:{
@@ -52,8 +55,12 @@
             height:250,
         }
     }).then(function(data){
-        video[0].srcObject = data
+        video[0].srcObject = data;
     });
+    video[0].onprogress = function(){
+        cobj.drawImage(video[0],0,0)
+    };
+
 
     setTimeout(function(){
         tishi1.css("display","none");

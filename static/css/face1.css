@@ -82,7 +82,7 @@ video{
     position:absolute;
     top:0;
     left:0;
-    /*display:none;*/
+    display:none;
 /*    隐藏*/
 }
 .zhezhao .son{
@@ -118,5 +118,10 @@ video{
     line-height:0.7rem;
     color:#fff;
     margin:0 auto;
+}
+canvas{
+    position:absolute;
+    top:0;
+    left:0;
 }
 
