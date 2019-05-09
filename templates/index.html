@@ -15,7 +15,7 @@
     <div class="box">
         吕梁学院物理系人脸识别项目
     </div>
-    <div class="btn1">手动登录</div>
+    <div class="btn1">注册</div>
     <div class="btn2">人脸识别</div>
 
     <div class="zhezhao">
@@ -39,6 +39,7 @@
 </body>
 <script>
     let btn2 =  $(".btn2"); //获取btn2
+    let btn1 =  $(".btn1"); //获取btn2
     let zhezhao = $(".zhezhao");
     let rightbtn = $(".rightbtn");
     let tishi = $(".tishi");
@@ -61,7 +62,9 @@
 
     });
 
-
+    btn1.click(function(){
+        location.href="zhuce.html"
+    })
 
 </script>
 </html>
