@@ -13,3 +13,64 @@ video{
     width:3.8rem;
     height:5rem;
 }
+.tishi1{
+    width:100%;
+    height:auto;
+    margin-top:3.3rem;
+    text-align:center;
+    color:#A0A0A0;
+
+}
+.tishi2{
+    width:100%;
+    height:auto;
+    margin-top:3rem;
+    text-align: center;
+    color:#A0A0A0;
+    display:none;
+}
+.tishi2 .top{
+    width:2.1rem;
+    height:0.2rem;
+    margin:0 auto 0.1rem;
+}
+.tishi2 .top div{
+    width:0.2rem;
+    height:0.2rem;
+    border-radius: 50%;
+    margin:0 0.05rem;
+    background-color:#85BE7F;
+    float:left;
+}
+
+@keyframes opacity {
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.2;
+    }
+}
+
+.tishi2 .top div:nth-child(1){
+    animation: opacity 1s infinite linear 0s;
+}
+.tishi2 .top div:nth-child(2){
+    animation: opacity 1s infinite linear 0.1s;
+}
+.tishi2 .top div:nth-child(3){
+    animation: opacity 1s infinite linear 0.2s;
+}
+.tishi2 .top div:nth-child(4){
+    animation: opacity 1s infinite linear 0.3s;
+}
+.tishi2 .top div:nth-child(5){
+    animation: opacity 1s infinite linear 0.4s;
+}
+.tishi2 .top div:nth-child(6){
+    animation: opacity 1s infinite linear 0.5s;
+}
+.tishi2 .top div:nth-child(7){
+    animation: opacity 1s infinite linear 0.6s;
+}
+

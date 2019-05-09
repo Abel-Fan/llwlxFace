@@ -14,10 +14,27 @@
     <div class="touxiang">
         <video src="" autoplay></video>
     </div>
+
+    <div class="tishi1">正脸对准屏幕</div>
+    <div class="tishi2">
+        <div class="top">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+        <div class="bottom">识别中,别着急</div>
+    </div>
+
 </body>
 
 <script>
     let video = $("video");
+    let tishi1 = $(".tishi1");
+    let tishi2 = $(".tishi2");
 
     navigator.mediaDevices.getUserMedia({
         video:{
@@ -26,7 +43,11 @@
         }
     }).then(function(data){
         video[0].srcObject = data
-    })
+    });
 
+    setTimeout(function(){
+        tishi1.css("display","none");
+        tishi2.css("display","block")
+    },2000)
 </script>
 </html>
