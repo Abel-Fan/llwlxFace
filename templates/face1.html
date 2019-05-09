@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en" rem="750">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>采集人脸</title>
+    <link rel="stylesheet" href="../static/css/u-reset.min.css">
+    <link rel="stylesheet" href="../static/css/face1.css">
+    <script src="../static/js/jquery.js"></script>
+</head>
+<body>
+    <div class="touxiang">
+        <video src="" autoplay></video>
+    </div>
+</body>
+
+<script>
+    let video = $("video");
+
+    navigator.mediaDevices.getUserMedia({
+        video:{
+            width:190,
+            height:250,
+        }
+    }).then(function(data){
+        video[0].srcObject = data
+    })
+
+</script>
+</html>

@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+.touxiang{
+    width:3.8rem;
+    height:5rem;
+    border:1px solid #000;
+    margin:2.2rem auto 0;
+}
+video{
+    width:3.8rem;
+    height:5rem;
+}
