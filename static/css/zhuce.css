@@ -106,4 +106,12 @@ body,html{
     line-height:0.72rem;
     color:#333;
 }
+.input .del{
+    width:0.54rem;
+    height:0.54rem;
+    float:right;
+    line-height:0.54rem;
+    text-align:center;
+    display:none;
+}
 

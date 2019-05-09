@@ -22,6 +22,7 @@
     <div class="input">
         <div class="dian"></div>
         <input type="text" placeholder="请输入您的名字">
+        <div class="del">×</div>
     </div>
 
     <div class="btn">开始识别</div>
@@ -30,7 +31,10 @@
 <script>
     let input = $("input");
     let btn = $(".btn");
+    let del = $(".del");
     let flag = false;
+    input.val("");
+
     input.on("input",function(){
         let text = $(this).val()  // 输入框的内容
         if(text!=""){
@@ -40,6 +44,8 @@
                 "box-shadow":"0 0.1rem 0.1rem 0 rgba(98,163,254,0.5)"
             })
             flag = true
+            del.css("display","block")
+
         }else{
             btn.css({
                 "background":"#ccc",
@@ -47,6 +53,7 @@
                 "box-shadow":"none"
             })
             flag = false
+            del.css("display","none")
         }
     })
 
@@ -54,6 +61,17 @@
         if(flag){
             location.href="https://www.baidu.com"
         }
+    });
+
+    del.click(function(){
+        input.val("");
+        del.css("display","none");
+        btn.css({
+            "background":"#ccc",
+            "color":"#333",
+            "box-shadow":"none"
+        });
+        flag = false
     })
 </script>
 </html>
