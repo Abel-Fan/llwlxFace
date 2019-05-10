@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>采集人脸</title>
+    <title>识别人脸</title>
     <link rel="stylesheet" href="../static/css/u-reset.min.css">
     <link rel="stylesheet" href="../static/css/face1.css">
     <script src="../static/js/jquery.js"></script>
@@ -46,6 +46,19 @@
     let tishi1 = $(".tishi1");
     let tishi2 = $(".tishi2");
     let canvas = $("canvas");
+    let zhezhao = $(".zhezhao");
+    let leftbtn = $(".leftbtn");
+    let url = "/error";
+    let name = "";
+    leftbtn.click(function(){
+        location.href = url
+        if(url=="/success"){
+            let speech = window.speechSynthesis;
+            let speechset = new SpeechSynthesisUtterance();
+            speechset.text = name+",你好。道路千万条,学习第一条。学习不努力,工作不顺利。";
+            speech.speak(speechset)
+        }
+    });
 
     cobj = canvas[0].getContext("2d");
 
@@ -65,7 +78,7 @@
             let data = canvas[0].toDataURL("image/jpeg",0.7).substr(23);
 
             $.ajax({
-                url:"/photo",
+                url:"/check",
                 type:'post',  //get
                 dataType:"json",
                 data:{url:data,name:localStorage.name},
@@ -74,8 +87,16 @@
                     if(data['error_msg']){
                         flag = true
                     }else{
-                        location.href="/success"
+                        let scores = data['result'][0]['scores'][0]
+                        name = data['result'][0]['user_info'];
+                        zhezhao.css("display",'block');
+                        if(scores>90){
+                            url = "/success"
+                        }else{
+                            url = "/error"
+                        }
                     }
+
                 }
             });
 
